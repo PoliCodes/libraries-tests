@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vue</title> 
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <input  v-model="message" type="text"/>
+            <input v-on:click="teste1" type="button"/>
+        </div>
+        <div>
+            <ul>
+                <li v-for="coisa in coisas">{{coisa}}</li>
+            </ul>
+        </div>
+    {{ message }}
+    </div>
+
+
+  <script src="js/vue.js"></script>
+  <script src="js/app.js"></script>  
+</body>
+</html>
