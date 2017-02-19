@@ -6,7 +6,7 @@ var app = new Vue({
 	},
 	methods: {
 		teste1: function(){			
-			this.coisas.push(this.message);			
+			this.coisas.push(this.message);	
 		}
 	}
 })
