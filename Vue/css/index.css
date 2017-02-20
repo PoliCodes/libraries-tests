@@ -1,0 +1,53 @@
+html, body{
+    /*background-color: #1F211F;*/
+}
+h1{
+    font-size: 36px;
+    text-align: center;
+}
+#app{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 500px;
+    background-color: #fff;   
+    min-height: 400px;
+    box-shadow: 1px 1px 5px #eee;
+   
+}
+
+.insertItem{   
+    display: block; 
+    /*width: 100%;   */
+}
+.insertItem input[type="text"]{
+    /*width: 488px;*/
+    height: 40px;
+    padding: 0 5px;
+    font-size: 24px;
+    color: #555;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+.insertItem input[type="button"]{
+    /*display:block;*/
+    height: 40px;    
+    padding:0 5px;
+    border:none;
+    background-color: #999;
+    cursor:pointer;
+}
+.itemsList{
+    display:block;
+    
+}
+.itemsList ul {
+    display:block;
+    margin: 0; 
+    padding: 0;       
+}
+.itemsList ul li {
+    display:block;
+    margin: 0; 
+    padding: 0;   
+}

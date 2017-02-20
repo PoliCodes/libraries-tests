@@ -3,21 +3,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../vue/css/index.css">
   <title>Vue</title> 
 </head>
 
 <body>
     <div id="app">
-        <div>
-            <input  v-model="message" type="text"/>
-            <input v-on:click="teste1" type="button"/>
+        <h1>TODO LIST VUE</h1>
+        <div class="insertItem">
+            <input  v-model="text" type="text"/>
+            <input v-on:click="insertItem" type="button" value="ADICIONAR"/>
         </div>
-        <div>
+        <div class="itemsList">
             <ul>
-                <li v-for="coisa in coisas">{{coisa}}</li>
+                <li v-for="(item, index) in items">
+                    {{item}}
+                    <input v-on:click="removeItem(index)" type="button" value="x"/>
+                </li>
             </ul>
         </div>
-    {{ message }}
+    {{ item }}
     </div>
 
 
