@@ -1,0 +1,75 @@
+html, body{ font-family: Arial, Helvetica, sans-serif; }
+h1{
+    font-size: 36px;
+    text-align: center;
+    color: #007ACC;
+}
+#app{
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 500px;
+    background-color: #fff;   
+    min-height: 700px;
+    /*box-shadow: 1px 1px 5px #ddd;   */
+}
+.insertItem{   
+    display: block; 
+    margin-bottom: 10px;
+    height: 40px;
+}
+.insertItem input[type="text"]{
+    display: block;
+    float: left;
+    height: 40px; 
+    width: 415px;  
+    padding: 0 5px;
+    margin-right: 5px;
+    font-size: 18px;
+    color: #555;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+.insertItem input[type="button"]{
+    display:block;
+    float: left;
+    height: 40px;  
+    width: 80px;  
+    padding:0 5px;
+    border:none;
+    cursor:pointer;
+    background-color: #007ACC;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+.itemsList{ display:block; }
+.itemsList ul {
+    display:block;
+    margin: 0; 
+    padding: 0;       
+}
+.itemsList ul li {
+    display:block;
+    margin: 0 0 10px 0; 
+    padding: 10px; 
+    font-size: 18px;
+    color: #555;  
+    box-shadow: 2px 1px 10px #eee;  
+    word-wrap: break-word; 
+}
+.itemsList ul li input[type="button"]{
+    display:block;
+    float: left;
+    /*padding: 5px; */
+    margin-right: 5px;
+    height: 22px;
+    font-size: 12px;
+    color: #fff;   
+    font-weight: bold; 
+    background-color: #007ACC;   
+    border: none;
+    box-sizing: border-box; 
+    cursor: pointer;
+    /*line-height: 0px;*/
+}
