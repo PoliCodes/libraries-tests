@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var react = require('gulp-react');
 var watch = require('gulp-watch');
  
-gulp.task('default', function () {
+gulp.task('default', ["react"], function () {
     gulp.start("watch");
 });
 

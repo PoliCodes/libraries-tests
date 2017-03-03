@@ -1,4 +1,5 @@
 ReactDOM.render(
-  React.createElement("h1", null, "oi oi", React.createElement("div", null, "sd ")),
+  React.createElement("h1", null, "222")
+  ,
   document.getElementById('root')
 );
