@@ -1,0 +1,2 @@
+[submodule "Ember/app1"]
+	url = https://github.com/polirs/libraries-tests-ember.git
