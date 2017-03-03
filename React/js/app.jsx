@@ -1,4 +1,4 @@
-var app1 = ReactDOM.render(
-    <h1>Hello, world!</h1>,
-    document.getElementById('root')
+ReactDOM.render(
+  <h1>oi oi<div>sd </div></h1>,
+  document.getElementById('root')
 );
