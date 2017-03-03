@@ -1,7 +1,4 @@
-/// /// <reference path="../typings/index.d.ts" />
 
-// import * as React from 'react';
-// import * as ReactDOM from 'react-dom';
 
 class DemoProps {
   public name:string;
@@ -101,3 +98,8 @@ ReactDOM.render(
   <NameForm  />,
   document.getElementById('root')
 );
+
+/// /// <reference path="../typings/index.d.ts" />
+
+// import * as React from 'react';
+// import * as ReactDOM from 'react-dom';
