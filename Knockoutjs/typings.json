@@ -1,0 +1,7 @@
+{
+  "name": "Knockoutjs",
+  "dependencies": {},
+  "globalDependencies": {
+    "knockout": "registry:global/knockout#3.4.0+20160516171930"
+  }
+}

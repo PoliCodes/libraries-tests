@@ -1,0 +1,21 @@
+{
+  "name": "knockoutjs",
+  "homepage": "https://github.com/polirs/libraries-tests",
+  "authors": [
+    "Danilo C Castro <ccastro.danilo@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.4.1",
+    "system.js": "^0.20.9"
+  }
+}
