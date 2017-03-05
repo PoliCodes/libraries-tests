@@ -5,7 +5,7 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <script type="text/javascript" src='bower_components/knockout/dist/knockout.debug.js'></script>
     <script async src="./js/index.js">
 
@@ -13,10 +13,40 @@
 </head>
 
 <body>
-    <div>
-        <p>First name: <strong data-bind="text: firstName"></strong></p>
-        <p>Last name: <strong data-bind="text: lastName"></strong></p>
+<!--<div id="app">
+        <h1>TODO LIST KNOCKOUT</h1>
+        <div class="insertItem">
+            <input data-bind="value: description" type="text" />
+            <input data-bind="click: addItem" type="button" value="OK" />
+        </div>
+        <div class="itemsList">
+            <ul data-bind="foreach: items">
+                <li>
+                    <input data-bind="click: $root.removeItem($data)" type="button" value="x" /> <span data-bind="text: $data"></span> &nbsp;
+                </li>
+            </ul>
+        </div>
     </div>
-</body>
+</body>-->
+
+
+<!--Teste-->
+<div id="app">
+     <h1>TODO LIST KNOCKOUT</h1>
+    <div class="insertItem">
+       <form data-bind="submit:addItem">
+        <input type="text" data-bind='value:itemToAdd, valueUpdate: "afterkeydown"' />
+        <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+    </form>
+    </div>
+     <div class="itemsList">
+       <select multiple="multiple" data-bind="options:allItems, selectedOptions:selectedItems"></select>
+    </div>
+    <div class="btnRemove">
+        <button data-bind="click: removeSelected, enable: selectedItems().length > 0">Remove</button>
+    </div>
+</div> 
+
+
 
 </html>
