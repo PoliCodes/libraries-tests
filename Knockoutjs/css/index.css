@@ -41,6 +41,7 @@ h1{
     font-size: 18px;
     color: #fff;
     font-weight: bold;
+	outline: none;
 }
 .itemsList{ display:block; }
 .itemsList select {
@@ -74,4 +75,5 @@ h1{
     border: none;
     box-sizing: border-box; 
     cursor: pointer;
+	outline: none;
 }

@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div id="app">
+  <h1>TODO LIST ANGULAR</h1>
+  <div class="insertItem">
+    <input [ngModel]="item" (keyup)="onKey($event)" type="text" />
+    <button (click)="insertItem()">ADD</button>
+  </div>
+  <div class="itemList">
+    <ul>
+      <li *ngFor="let item of lista; let i = index">
+        <button (click)="deleteItem(i)">x</button>{{ item }}
+      </li>
+    </ul>
+  </div>
+</div>
