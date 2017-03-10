@@ -8,95 +8,44 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var DemoProps = (function () {
-    function DemoProps() {
-    }
-    return DemoProps;
-}());
-var Form = (function (_super) {
-    __extends(Form, _super);
-    function Form(props) {
+var App1 = (function (_super) {
+    __extends(App1, _super);
+    function App1(props) {
         var _this = _super.call(this, props) || this;
-        _this.handdleChange2 = function (event) {
-            console.log(event.target);
-            _this.setState({ nome: event.target.value });
+        _this.itemChange = function (event) {
+            var newValue = event.target.value;
+            _this.setState({ item: event.target.value });
         };
-        _this.nome = "ok";
-        _this.sobrenome = "jose";
+        _this.addClick = function (event) {
+            _this.state.lista.push(_this.state.item);
+            _this.setState({
+                item: "",
+                lista: _this.state.lista
+            });
+        };
+        _this.removeItem = function (value) {
+            _this.state.lista.splice(value, 1);
+            _this.setState({
+                lista: _this.state.lista
+            });
+        };
+        _this.state = { item: "", lista: [] };
         return _this;
     }
-    Form.prototype.getInitialState = function () {
-        return { message: 'Hello!' };
+    App1.prototype.render = function () {
+        var _this = this;
+        return (React.createElement("div", null,
+            React.createElement("h1", null, "TODO LIST REACT"),
+            React.createElement("div", { className: "insertItem" },
+                React.createElement("input", { type: "text", value: this.state.item, onChange: this.itemChange }),
+                React.createElement("input", { value: "ADD", type: "button", onClick: this.addClick })),
+            React.createElement("div", { className: "itemsList" },
+                React.createElement("ul", null, this.state.lista.map(function (item, index) {
+                    return React.createElement("li", null,
+                        React.createElement("input", { onClick: _this.removeItem.bind(_this, index), type: "button", value: "x" }),
+                        item);
+                })))));
     };
-    Form.prototype.handleChange = function (event) {
-        this.setState({ nome: event.target.value });
-    };
-    Form.prototype.render = function () {
-        return React.createElement("div", null,
-            "valor: ",
-            React.createElement("input", { onChange: this.handdleChange2 }),
-            " o valor \u00E9 ",
-            this.nome);
-    };
-    return Form;
+    return App1;
 }(React.Component));
-var NameForm = (function (_super) {
-    __extends(NameForm, _super);
-    function NameForm(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = { value: '' };
-        _this.handleChange = _this.handleChange.bind(_this);
-        _this.handleSubmit = _this.handleSubmit.bind(_this);
-        return _this;
-    }
-    NameForm.prototype.handleChange = function (event) {
-        console.log('ok');
-        this.setState({ value: event.target.value });
-    };
-    NameForm.prototype.handleSubmit = function (event) {
-        alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
-    };
-    NameForm.prototype.render = function () {
-        return (React.createElement("form", { onSubmit: this.handleSubmit },
-            React.createElement("label", null,
-                "Name: ",
-                this.state.value,
-                React.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange })),
-            React.createElement("input", { type: "submit", value: "Submit" })));
-    };
-    return NameForm;
-}(React.Component));
-var Demo2 = React.createClass({
-    message: "test2e",
-    handleChange: function (event) {
-        console.log("ok");
-        this.setState({ nome: event.target.value });
-    },
-    getInitialState: function () {
-        return { message: 'Hello!' };
-    },
-    render: function () {
-        return React.createElement("div", null,
-            React.createElement("input", { value: this.message, onChange: this.handdleChange }),
-            this.message);
-    }
-});
-var Demo = (function (_super) {
-    __extends(Demo, _super);
-    function Demo(props) {
-        var _this = _super.call(this, props) || this;
-        _this.foo = 42;
-        return _this;
-    }
-    Demo.prototype.render = function () {
-        return React.createElement("div", null,
-            "Hello world!",
-            this.foo);
-    };
-    return Demo;
-}(React.Component));
-ReactDOM.render(React.createElement(NameForm, null), document.getElementById('root'));
-/// /// <reference path="../typings/index.d.ts" />
-// import * as React from 'react';
-// import * as ReactDOM from 'react-dom'; 
+ReactDOM.render(React.createElement(App1, null), document.getElementById('app'));
