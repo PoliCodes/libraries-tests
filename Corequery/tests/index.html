@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>
+		<•>
+	</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../dist/corequery.min.js"></script>
+	<link rel="stylesheet" href="./styles/index.css">
+	<style id="corequery-pre">
+		[data-for] {
+			display: none !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="app">
+		<h1>TODO CoreQuery</h1>
+		<div class="insertItem">
+			<input type="text" data-value="descricao"><span data-text=""></span>
+			<input type="button" data-click="lista.push(descricao) descricao.set('')" value="ADD">
+		</div>
+		<div class="itemsList">
+			<ul>
+				<li data-for="lista.index.item" id="li1">
+					<span data-text=".index"></span>
+					<input data-click=".item.delete()" type="button" value="x" />
+					<span data-text=".item"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>
